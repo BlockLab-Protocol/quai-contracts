@@ -7,14 +7,14 @@ import '../libraries/LowGasSafeMath.sol';
 import './PeripheryPayments.sol';
 import '../interfaces/IPeripheryPaymentsWithFee.sol';
 
-import '../interfaces/external/IWETH9.sol';
+import '../interfaces/external/IWQuai.sol';
 import '../libraries/TransferHelper.sol';
 
 abstract contract PeripheryPaymentsWithFee is PeripheryPayments, IPeripheryPaymentsWithFee {
     using LowGasSafeMath for uint256;
 
     /// @inheritdoc IPeripheryPaymentsWithFee
-    function unwrapWETH9WithFee(
+    function unwrapWQuaiWithFee(
         uint256 amountMinimum,
         address recipient,
         uint256 feeBips,
@@ -22,14 +22,14 @@ abstract contract PeripheryPaymentsWithFee is PeripheryPayments, IPeripheryPayme
     ) public payable override {
         require(feeBips > 0 && feeBips <= 100);
 
-        uint256 balanceWETH9 = IWETH9(WETH9).balanceOf(address(this));
-        require(balanceWETH9 >= amountMinimum, 'Insufficient WETH9');
+        uint256 balanceWQuai = IWQuai(WQuai).balanceOf(address(this));
+        require(balanceWQuai >= amountMinimum, 'Insufficient WQuai');
 
-        if (balanceWETH9 > 0) {
-            IWETH9(WETH9).withdraw(balanceWETH9);
-            uint256 feeAmount = balanceWETH9.mul(feeBips) / 10_000;
+        if (balanceWQuai > 0) {
+            IWQuai(WQuai).withdraw(balanceWQuai);
+            uint256 feeAmount = balanceWQuai.mul(feeBips) / 10_000;
             if (feeAmount > 0) TransferHelper.safeTransferETH(feeRecipient, feeAmount);
-            TransferHelper.safeTransferETH(recipient, balanceWETH9 - feeAmount);
+            TransferHelper.safeTransferETH(recipient, balanceWQuai - feeAmount);
         }
     }
 

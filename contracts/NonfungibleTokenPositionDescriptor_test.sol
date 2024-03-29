@@ -22,10 +22,10 @@ contract NonfungibleTokenPositionDescriptor_test is INonfungibleTokenPositionDes
     address private constant TBTC = 0x0000000000000000000000000000000000000000;
     address private constant WBTC = 0x62B8a1eF640B96E86d6927824E5FE682d07D3b46;
 
-    address public immutable WETH9;
+    address public immutable WQuai;
 
-    constructor(address _WETH9) {
-        WETH9 = _WETH9;
+    constructor(address _WQuai) {
+        WQuai = _WQuai;
     }
 
     /// @inheritdoc INonfungibleTokenPositionDescriptor
@@ -81,7 +81,7 @@ contract NonfungibleTokenPositionDescriptor_test is INonfungibleTokenPositionDes
     }
 
     function tokenRatioPriority(address token, uint256 chainId) public view returns (int256) {
-        if (token == WETH9) {
+        if (token == WQuai) {
             return TokenRatioSortOrder.DENOMINATOR;
         }
         if (chainId == 1) {

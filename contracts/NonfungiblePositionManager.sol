@@ -70,9 +70,9 @@ contract NonfungiblePositionManager is
 
     constructor(
         address _factory,
-        address _WETH9,
+        address _WQuai,
         address _tokenDescriptor_
-    ) ERC721Permit('Zebra Positions NFT', 'ZEBRA-POS', '1') PeripheryImmutableState(_factory, _WETH9) {
+    ) ERC721Permit('Zebra Positions NFT', 'ZEBRA-POS', '1') PeripheryImmutableState(_factory, _WQuai) {
         _tokenDescriptor = _tokenDescriptor_;
     }
 

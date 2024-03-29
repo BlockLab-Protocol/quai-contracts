@@ -1,0 +1,3790 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\BlockTimestamp.sol": {
+      "lastModificationDate": 1711735109327,
+      "contentHash": "cb564af496372397108956cbf9dbc45d",
+      "sourceName": "contracts/base/BlockTimestamp.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "BlockTimestamp"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\PeripheryValidation.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "a1712feb71ba501bc8e74e3dddaacd79",
+      "sourceName": "contracts/base/PeripheryValidation.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BlockTimestamp.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "PeripheryValidation"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\SwapRouter.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "d6b130588270873cb3e7c6e4d1ac6416",
+      "sourceName": "contracts/SwapRouter.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/SafeCast.sol",
+        "./libraries/TickMath.sol",
+        "./interfaces/IZebraV3Pool.sol",
+        "./interfaces/ISwapRouter.sol",
+        "./base/PeripheryImmutableState.sol",
+        "./base/PeripheryValidation.sol",
+        "./base/PeripheryPaymentsWithFee.sol",
+        "./base/Multicall.sol",
+        "./base/SelfPermit.sol",
+        "./libraries/Path.sol",
+        "./libraries/PoolAddress.sol",
+        "./libraries/CallbackValidation.sol",
+        "./interfaces/external/IWETH9.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "SwapRouter"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\SafeCast.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "1fcb436e2f434938e6b62c8c1bcd87ba",
+      "sourceName": "contracts/libraries/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\TickMath.sol": {
+      "lastModificationDate": 1711735109498,
+      "contentHash": "c1961439172c54237fdde6f7c4ea004b",
+      "sourceName": "contracts/libraries/TickMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.8.0"
+      ],
+      "artifacts": [
+        "TickMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IZebraV3Pool.sol": {
+      "lastModificationDate": 1711735109420,
+      "contentHash": "d80269920cfa4b4a0bab566880f986eb",
+      "sourceName": "contracts/interfaces/IZebraV3Pool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./pool/IZebraV3PoolImmutables.sol",
+        "./pool/IZebraV3PoolState.sol",
+        "./pool/IZebraV3PoolDerivedState.sol",
+        "./pool/IZebraV3PoolActions.sol",
+        "./pool/IZebraV3PoolOwnerActions.sol",
+        "./pool/IZebraV3PoolEvents.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3Pool"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\ISwapRouter.sol": {
+      "lastModificationDate": 1711735109405,
+      "contentHash": "29f3957535fa0df477f1ae351c5cf775",
+      "sourceName": "contracts/interfaces/ISwapRouter.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./callback/IZebraV3SwapCallback.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ISwapRouter"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\PeripheryImmutableState.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "861fb6f91403e2ff319ea42ca70c1c3a",
+      "sourceName": "contracts/base/PeripheryImmutableState.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IPeripheryImmutableState.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "PeripheryImmutableState"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\PeripheryPaymentsWithFee.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "8cabada44e083ce4de676372abfd2aa0",
+      "sourceName": "contracts/base/PeripheryPaymentsWithFee.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../libraries/LowGasSafeMath.sol",
+        "./PeripheryPayments.sol",
+        "../interfaces/IPeripheryPaymentsWithFee.sol",
+        "../interfaces/external/IWETH9.sol",
+        "../libraries/TransferHelper.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "PeripheryPaymentsWithFee"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\Multicall.sol": {
+      "lastModificationDate": 1711735109327,
+      "contentHash": "80f64ac01e3e7fd0512774edae0e646e",
+      "sourceName": "contracts/base/Multicall.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IMulticall.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "Multicall"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\SelfPermit.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "c2be6c90066c95baa1c960b4988a3eb3",
+      "sourceName": "contracts/base/SelfPermit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/drafts/IERC20Permit.sol",
+        "../interfaces/ISelfPermit.sol",
+        "../interfaces/external/IERC20PermitAllowed.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "SelfPermit"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\PoolAddress.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "6fd99949256456aad9c6e32a37c39210",
+      "sourceName": "contracts/libraries/PoolAddress.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "PoolAddress"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\Path.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "1a0d1bbc250125ac97e551f19a8e86f1",
+      "sourceName": "contracts/libraries/Path.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BytesLib.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "Path"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\CallbackValidation.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "89cab8335943d824c5d931d7d4c4e5c3",
+      "sourceName": "contracts/libraries/CallbackValidation.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Pool.sol",
+        "./PoolAddress.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "CallbackValidation"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\external\\IWETH9.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "6500fcc9544a892b4afa1a6fc831718f",
+      "sourceName": "contracts/interfaces/external/IWETH9.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "IWETH9"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolImmutables.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "936fb602400cb434b37335acc68e54a3",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolImmutables.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolImmutables"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolActions.sol": {
+      "lastModificationDate": 1711735109420,
+      "contentHash": "4afe1080e925725d7f2ba3f9ff311c5f",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolActions.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolActions"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolState.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "51fc777a6a007bf31a14258697d09ed7",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolState.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolState"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolDerivedState.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "789a6dbbdf66f1180865c5a9ccc2b62c",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolDerivedState.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolDerivedState"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolEvents.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "cff69cea281569d6832df2aa4f80f7ef",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolEvents.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolEvents"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\pool\\IZebraV3PoolOwnerActions.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "5bdde2a2c072a50e2f10a092107d5210",
+      "sourceName": "contracts/interfaces/pool/IZebraV3PoolOwnerActions.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolOwnerActions"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\callback\\IZebraV3SwapCallback.sol": {
+      "lastModificationDate": 1711735109358,
+      "contentHash": "0233ea0720986b891849e720f179856a",
+      "sourceName": "contracts/interfaces/callback/IZebraV3SwapCallback.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3SwapCallback"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IPeripheryImmutableState.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "3ac1947d300644341850f273f8699a8e",
+      "sourceName": "contracts/interfaces/IPeripheryImmutableState.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IPeripheryImmutableState"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\LowGasSafeMath.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "64fd07e0a48648078b9a82620fcc99b8",
+      "sourceName": "contracts/libraries/LowGasSafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0"
+      ],
+      "artifacts": [
+        "LowGasSafeMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IPeripheryPaymentsWithFee.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "1457cab30ef207d7a6be820dd2db7dd1",
+      "sourceName": "contracts/interfaces/IPeripheryPaymentsWithFee.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IPeripheryPayments.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPeripheryPaymentsWithFee"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\TransferHelper.sol": {
+      "lastModificationDate": 1711735109498,
+      "contentHash": "ebc71237b4512e3d2b303fc6fd82ca7e",
+      "sourceName": "contracts/libraries/TransferHelper.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "TransferHelper"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\PeripheryPayments.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "29537f7b139c3a81b182457f5bfdba7d",
+      "sourceName": "contracts/base/PeripheryPayments.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../interfaces/IPeripheryPayments.sol",
+        "../interfaces/external/IWETH9.sol",
+        "../libraries/TransferHelper.sol",
+        "./PeripheryImmutableState.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "PeripheryPayments"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1711735144951,
+      "contentHash": "70ec621ea910798b6c590a0b402a5bb9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IPeripheryPayments.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "c4f29c3bea08970cc12c474ec46bf99b",
+      "sourceName": "contracts/interfaces/IPeripheryPayments.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPeripheryPayments"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IMulticall.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "27669cab8a45f688835e2a141ba707a4",
+      "sourceName": "contracts/interfaces/IMulticall.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IMulticall"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\ISelfPermit.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "e9210b40c817e96c86062f7625593ab4",
+      "sourceName": "contracts/interfaces/ISelfPermit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ISelfPermit"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\external\\IERC20PermitAllowed.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "3118f5df16a0fefb8194535479aaf7a0",
+      "sourceName": "contracts/interfaces/external/IERC20PermitAllowed.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC20PermitAllowed"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\drafts\\IERC20Permit.sol": {
+      "lastModificationDate": 1711735144670,
+      "contentHash": "554ef6825dd2112860a7f82be25dab45",
+      "sourceName": "@openzeppelin/contracts/drafts/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\BytesLib.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "620de8a39aae6f74d4289bcf4dd49efc",
+      "sourceName": "contracts/libraries/BytesLib.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.8.0"
+      ],
+      "artifacts": [
+        "BytesLib"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\V3Migrator.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "1f3816b801c2c489bdeaa796bcabf281",
+      "sourceName": "contracts/V3Migrator.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./libraries/LowGasSafeMath.sol",
+        "./interfaces/IZebraV2Pair.sol",
+        "./interfaces/INonfungiblePositionManager.sol",
+        "./libraries/TransferHelper.sol",
+        "./interfaces/IV3Migrator.sol",
+        "./base/PeripheryImmutableState.sol",
+        "./base/Multicall.sol",
+        "./base/SelfPermit.sol",
+        "./interfaces/external/IWETH9.sol",
+        "./base/PoolInitializer.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "V3Migrator"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IZebraV2Pair.sol": {
+      "lastModificationDate": 1711735109405,
+      "contentHash": "ac8fabdc68fc2bfc377d8b8c89e2cbf9",
+      "sourceName": "contracts/interfaces/IZebraV2Pair.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV2Pair"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\INonfungiblePositionManager.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "0cbec56efd2045e6bc41c04a19c59737",
+      "sourceName": "contracts/interfaces/INonfungiblePositionManager.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol",
+        "@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol",
+        "./IPoolInitializer.sol",
+        "./IERC721Permit.sol",
+        "./IPeripheryPayments.sol",
+        "./IPeripheryImmutableState.sol",
+        "../libraries/PoolAddress.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "INonfungiblePositionManager"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IV3Migrator.sol": {
+      "lastModificationDate": 1711735109405,
+      "contentHash": "2c9fe53fd09ef2747a48a48f5ca7fc0b",
+      "sourceName": "contracts/interfaces/IV3Migrator.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IMulticall.sol",
+        "./ISelfPermit.sol",
+        "./IPoolInitializer.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IV3Migrator"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\PoolInitializer.sol": {
+      "lastModificationDate": 1711735109342,
+      "contentHash": "35c0327a7d6eafa2e13b8363f372655c",
+      "sourceName": "contracts/base/PoolInitializer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Factory.sol",
+        "../interfaces/IZebraV3Pool.sol",
+        "./PeripheryImmutableState.sol",
+        "../interfaces/IPoolInitializer.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "PoolInitializer"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IPoolInitializer.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "ff171454f239cc44f0906ceeca46b34d",
+      "sourceName": "contracts/interfaces/IPoolInitializer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPoolInitializer"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IERC721Permit.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "cae84be8214d4e4efc0a372c720d6d96",
+      "sourceName": "contracts/interfaces/IERC721Permit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC721Permit"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Metadata.sol": {
+      "lastModificationDate": 1711735144983,
+      "contentHash": "7fe751b35ebe8466b56415cce55a7074",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1711735144967,
+      "contentHash": "889ec04fca4214581eef408fff230efa",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1711735144967,
+      "contentHash": "1607fe9cc333c6de30f5098d45061a0b",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1711735144701,
+      "contentHash": "253edeb099cfd6a3b0501d2620312e3e",
+      "sourceName": "@openzeppelin/contracts/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IZebraV3Factory.sol": {
+      "lastModificationDate": 1711735109420,
+      "contentHash": "a55bb4f40f6159de2d37d2bb85ab819d",
+      "sourceName": "contracts/interfaces/IZebraV3Factory.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3Factory"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\NonfungiblePositionManager.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "215b4394a807838fde358df6f8f4d125",
+      "sourceName": "contracts/NonfungiblePositionManager.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3Pool.sol",
+        "./libraries/FixedPoint128.sol",
+        "./libraries/FullMath.sol",
+        "./interfaces/INonfungiblePositionManager.sol",
+        "./interfaces/INonfungibleTokenPositionDescriptor.sol",
+        "./libraries/PositionKey.sol",
+        "./libraries/PoolAddress.sol",
+        "./base/LiquidityManagement.sol",
+        "./base/PeripheryImmutableState.sol",
+        "./base/Multicall.sol",
+        "./base/ERC721Permit.sol",
+        "./base/PeripheryValidation.sol",
+        "./base/SelfPermit.sol",
+        "./base/PoolInitializer.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "NonfungiblePositionManager"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\FullMath.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "11913fd03f77ce4b8079ac228cc2e671",
+      "sourceName": "contracts/libraries/FullMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0 <0.8.0"
+      ],
+      "artifacts": [
+        "FullMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\FixedPoint128.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "c054ee6029cb5e7281b83d6fd45c8068",
+      "sourceName": "contracts/libraries/FixedPoint128.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "FixedPoint128"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\PositionKey.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "6a94fea6b36d8a2374aa8fea98802d0b",
+      "sourceName": "contracts/libraries/PositionKey.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "PositionKey"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\INonfungibleTokenPositionDescriptor.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "ff0245f759c4b3fd9ba25dde204cce3b",
+      "sourceName": "contracts/interfaces/INonfungibleTokenPositionDescriptor.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./INonfungiblePositionManager.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "INonfungibleTokenPositionDescriptor"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\LiquidityManagement.sol": {
+      "lastModificationDate": 1711735109327,
+      "contentHash": "f3a984808cf8a53237bc17ca008ff94e",
+      "sourceName": "contracts/base/LiquidityManagement.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Factory.sol",
+        "../interfaces/callback/IZebraV3MintCallback.sol",
+        "../libraries/TickMath.sol",
+        "../libraries/PoolAddress.sol",
+        "../libraries/CallbackValidation.sol",
+        "../libraries/LiquidityAmounts.sol",
+        "./PeripheryPayments.sol",
+        "./PeripheryImmutableState.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "LiquidityManagement"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\base\\ERC721Permit.sol": {
+      "lastModificationDate": 1711735109327,
+      "contentHash": "639db478529e73f83d27bdb3f7ab349e",
+      "sourceName": "contracts/base/ERC721Permit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/utils/Address.sol",
+        "../libraries/ChainId.sol",
+        "../interfaces/external/IERC1271.sol",
+        "../interfaces/IERC721Permit.sol",
+        "./BlockTimestamp.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "ERC721Permit"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\callback\\IZebraV3MintCallback.sol": {
+      "lastModificationDate": 1711735109358,
+      "contentHash": "8915c53afc8e97881b1f247b83b30d94",
+      "sourceName": "contracts/interfaces/callback/IZebraV3MintCallback.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3MintCallback"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\LiquidityAmounts.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "c60f37305d2df30e870cce0bf8d755a5",
+      "sourceName": "contracts/libraries/LiquidityAmounts.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FullMath.sol",
+        "./FixedPoint96.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "LiquidityAmounts"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\FixedPoint96.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "d5ac3f03695c961ce044a081e3edf7aa",
+      "sourceName": "contracts/libraries/FixedPoint96.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "FixedPoint96"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\ChainId.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "d4319f0f58b5d78e71955402041a0e88",
+      "sourceName": "contracts/libraries/ChainId.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0"
+      ],
+      "artifacts": [
+        "ChainId"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\external\\IERC1271.sol": {
+      "lastModificationDate": 1711735109358,
+      "contentHash": "ced51e25756dcacff8724a769af0a0ac",
+      "sourceName": "contracts/interfaces/external/IERC1271.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC1271"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1711735144998,
+      "contentHash": "fc7c67d7b17cde979a685143a26b2bc8",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1711735144967,
+      "contentHash": "3fa5b045af1067a925e02da647523224",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Context.sol",
+        "./IERC721.sol",
+        "./IERC721Metadata.sol",
+        "./IERC721Enumerable.sol",
+        "./IERC721Receiver.sol",
+        "../../introspection/ERC165.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol",
+        "../../utils/EnumerableSet.sol",
+        "../../utils/EnumerableMap.sol",
+        "../../utils/Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\math\\SafeMath.sol": {
+      "lastModificationDate": 1711735144701,
+      "contentHash": "871a094d6b6b4c3714946e86329f2fa2",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1711735144686,
+      "contentHash": "674a2137d8125c497b9dc83b82235171",
+      "sourceName": "@openzeppelin/contracts/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableSet.sol": {
+      "lastModificationDate": 1711735145139,
+      "contentHash": "67da1a55369b7665b43457144add6761",
+      "sourceName": "@openzeppelin/contracts/utils/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableMap.sol": {
+      "lastModificationDate": 1711735145108,
+      "contentHash": "d35f59d1f5a637f1c9d80319c401c779",
+      "sourceName": "@openzeppelin/contracts/utils/EnumerableMap.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "EnumerableMap"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1711735144998,
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1711735145139,
+      "contentHash": "0a0b5402f31b9b60fdb741918c57247f",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1711735144983,
+      "contentHash": "b00bb215c82f73f87e6fed90b74f67d6",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\ZebraV3Pool.sol": {
+      "lastModificationDate": 1711735109530,
+      "contentHash": "e1dc7b4dda04ea796c36f24b247bd85d",
+      "sourceName": "contracts/ZebraV3Pool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3Pool.sol",
+        "./NoDelegateCall.sol",
+        "./libraries/LowGasSafeMath.sol",
+        "./libraries/SafeCast.sol",
+        "./libraries/Tick.sol",
+        "./libraries/TickBitmap.sol",
+        "./libraries/Position.sol",
+        "./libraries/Oracle.sol",
+        "./libraries/FullMath.sol",
+        "./libraries/FixedPoint128.sol",
+        "./libraries/TransferHelper.sol",
+        "./libraries/TickMath.sol",
+        "./libraries/LiquidityMath.sol",
+        "./libraries/SqrtPriceMath.sol",
+        "./libraries/SwapMath.sol",
+        "./interfaces/IZebraV3PoolDeployer.sol",
+        "./interfaces/IZebraV3Factory.sol",
+        "./interfaces/IERC20Minimal.sol",
+        "./interfaces/callback/IZebraV3MintCallback.sol",
+        "./interfaces/callback/IZebraV3SwapCallback.sol",
+        "./interfaces/callback/IZebraV3FlashCallback.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "ZebraV3Pool"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\NoDelegateCall.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "0969c20770e672558378a13c75a7b957",
+      "sourceName": "contracts/NoDelegateCall.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "NoDelegateCall"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\Tick.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "f577d6764d38cffeb53fe47a117b48de",
+      "sourceName": "contracts/libraries/Tick.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./LowGasSafeMath.sol",
+        "./SafeCast.sol",
+        "./TickMath.sol",
+        "./LiquidityMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Tick"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\TickBitmap.sol": {
+      "lastModificationDate": 1711735109498,
+      "contentHash": "ffde802a9fc24b877eaa1a1a4b81ffc0",
+      "sourceName": "contracts/libraries/TickBitmap.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BitMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "TickBitmap"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\Position.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "37c45a7efe076014c9c0b351aa183881",
+      "sourceName": "contracts/libraries/Position.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FullMath.sol",
+        "./FixedPoint128.sol",
+        "./LiquidityMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Position"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\Oracle.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "6627281e6cb2f9e5a3274b558550ebf2",
+      "sourceName": "contracts/libraries/Oracle.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Oracle"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\LiquidityMath.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "4b4a3bb5e7e309ce70c8d47069d5f764",
+      "sourceName": "contracts/libraries/LiquidityMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "LiquidityMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\SqrtPriceMath.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "e3e855bc4731e42c35ad81cc7b290be0",
+      "sourceName": "contracts/libraries/SqrtPriceMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./LowGasSafeMath.sol",
+        "./SafeCast.sol",
+        "./FullMath.sol",
+        "./UnsafeMath.sol",
+        "./FixedPoint96.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "SqrtPriceMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\SwapMath.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "211b88b5c6fd99e0640d76e34a6536c7",
+      "sourceName": "contracts/libraries/SwapMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FullMath.sol",
+        "./SqrtPriceMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "SwapMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IZebraV3PoolDeployer.sol": {
+      "lastModificationDate": 1711735109420,
+      "contentHash": "d52de7c847659139edd6dd2fdd54ba77",
+      "sourceName": "contracts/interfaces/IZebraV3PoolDeployer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3PoolDeployer"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IERC20Minimal.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "968682ffabc0e2100817a6cced86a519",
+      "sourceName": "contracts/interfaces/IERC20Minimal.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC20Minimal"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\callback\\IZebraV3FlashCallback.sol": {
+      "lastModificationDate": 1711735109358,
+      "contentHash": "3b3dc3fc1e361dcccc82dfa27ebd0139",
+      "sourceName": "contracts/interfaces/callback/IZebraV3FlashCallback.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IZebraV3FlashCallback"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\BitMath.sol": {
+      "lastModificationDate": 1711735109452,
+      "contentHash": "2b55d1de49b29a36ce81fbeb48e26d60",
+      "sourceName": "contracts/libraries/BitMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "BitMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\UnsafeMath.sol": {
+      "lastModificationDate": 1711735109498,
+      "contentHash": "b7395340ecec2c9c604d48ee19980b4b",
+      "sourceName": "contracts/libraries/UnsafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "UnsafeMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\ZebraV3PoolDeployer.sol": {
+      "lastModificationDate": 1711735109530,
+      "contentHash": "40ea8a56696b64928005385264bc4243",
+      "sourceName": "contracts/ZebraV3PoolDeployer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3PoolDeployer.sol",
+        "./ZebraV3Pool.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "ZebraV3PoolDeployer"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\ZebraV3Factory.sol": {
+      "lastModificationDate": 1711735109530,
+      "contentHash": "3de5ebd2ef2d1716a7f42cea5cf4409e",
+      "sourceName": "contracts/ZebraV3Factory.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3Factory.sol",
+        "./ZebraV3PoolDeployer.sol",
+        "./NoDelegateCall.sol",
+        "./ZebraV3Pool.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "ZebraV3Factory"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\NonfungibleTokenPositionDescriptor_test.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "558a103f93974eb81d4f568f6881703d",
+      "sourceName": "contracts/NonfungibleTokenPositionDescriptor_test.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3Pool.sol",
+        "./libraries/SafeERC20Namer.sol",
+        "./libraries/ChainId.sol",
+        "./interfaces/INonfungiblePositionManager.sol",
+        "./interfaces/INonfungibleTokenPositionDescriptor.sol",
+        "./interfaces/IERC20Metadata.sol",
+        "./libraries/PoolAddress.sol",
+        "./libraries/NFTDescriptor.sol",
+        "./libraries/TokenRatioSortOrder.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "NonfungibleTokenPositionDescriptor_test"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\SafeERC20Namer.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "109f6bbb24a3c09f4c331289d27aef97",
+      "sourceName": "contracts/libraries/SafeERC20Namer.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AddressStringUtil.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "SafeERC20Namer"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IERC20Metadata.sol": {
+      "lastModificationDate": 1711735109373,
+      "contentHash": "2568184aa8fa14a521535f09147cf21a",
+      "sourceName": "contracts/interfaces/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\NFTDescriptor.sol": {
+      "lastModificationDate": 1711743052391,
+      "contentHash": "34e166207180a5dcbf29cd210adc5fc4",
+      "sourceName": "contracts/libraries/NFTDescriptor.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Pool.sol",
+        "./TickMath.sol",
+        "./BitMath.sol",
+        "./FullMath.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/math/SignedSafeMath.sol",
+        "base64-sol/base64.sol",
+        "./HexStrings.sol",
+        "./NFTSVG.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "NFTDescriptor"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\TokenRatioSortOrder.sol": {
+      "lastModificationDate": 1711735109498,
+      "contentHash": "c8428b33816faca427ab563ccb5d6f41",
+      "sourceName": "contracts/libraries/TokenRatioSortOrder.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "TokenRatioSortOrder"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\AddressStringUtil.sol": {
+      "lastModificationDate": 1711743145252,
+      "contentHash": "bbdb35b7fbb9d6a90e61939278d1ce04",
+      "sourceName": "contracts/libraries/AddressStringUtil.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "AddressStringUtil"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\HexStrings.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "d6d6bddf64fff6ceae15ce25c6a1a883",
+      "sourceName": "contracts/libraries/HexStrings.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "HexStrings"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\NFTSVG.sol": {
+      "lastModificationDate": 1711735109467,
+      "contentHash": "7da4d805f4769a80bb5517caabe2e9b8",
+      "sourceName": "contracts/libraries/NFTSVG.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./BitMath.sol",
+        "base64-sol/base64.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.6"
+      ],
+      "artifacts": [
+        "NFTSVG"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\base64-sol\\base64.sol": {
+      "lastModificationDate": 1711735196404,
+      "contentHash": "0d54cb6a748ddde95d92ed7802c9248d",
+      "sourceName": "base64-sol/base64.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "Base64"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\node_modules\\@openzeppelin\\contracts\\math\\SignedSafeMath.sol": {
+      "lastModificationDate": 1711735144717,
+      "contentHash": "f90947ba3efcd88fec132a905c4c6b38",
+      "sourceName": "@openzeppelin/contracts/math/SignedSafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "SignedSafeMath"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\NonfungibleTokenPositionDescriptor.sol": {
+      "lastModificationDate": 1711735109514,
+      "contentHash": "3e5b4dae5e94b688a517db39013fa172",
+      "sourceName": "contracts/NonfungibleTokenPositionDescriptor.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IZebraV3Pool.sol",
+        "./libraries/SafeERC20Namer.sol",
+        "./libraries/ChainId.sol",
+        "./interfaces/INonfungiblePositionManager.sol",
+        "./interfaces/INonfungibleTokenPositionDescriptor.sol",
+        "./interfaces/IERC20Metadata.sol",
+        "./libraries/PoolAddress.sol",
+        "./libraries/NFTDescriptor.sol",
+        "./libraries/TokenRatioSortOrder.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "NonfungibleTokenPositionDescriptor"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\libraries\\PoolTicksCounter.sol": {
+      "lastModificationDate": 1711735109483,
+      "contentHash": "11158392ca9db5374b04bddb632de03e",
+      "sourceName": "contracts/libraries/PoolTicksCounter.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Pool.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "PoolTicksCounter"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\len\\QuoterV2.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "b334dd3fdf64c95774f44e966cdd5117",
+      "sourceName": "contracts/len/QuoterV2.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeCast.sol",
+        "../libraries/TickMath.sol",
+        "../libraries/TickBitmap.sol",
+        "../interfaces/IZebraV3Pool.sol",
+        "../interfaces/callback/IZebraV3SwapCallback.sol",
+        "../interfaces/IQuoterV2.sol",
+        "../base/PeripheryImmutableState.sol",
+        "../libraries/Path.sol",
+        "../libraries/PoolAddress.sol",
+        "../libraries/CallbackValidation.sol",
+        "../libraries/PoolTicksCounter.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "QuoterV2"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\IQuoterV2.sol": {
+      "lastModificationDate": 1711735109389,
+      "contentHash": "f993e8a28959b90b3a5f6eede60e5f4b",
+      "sourceName": "contracts/interfaces/IQuoterV2.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IQuoterV2"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\len\\TickLens.sol": {
+      "lastModificationDate": 1711735109436,
+      "contentHash": "d1daeecf4e3306a394eece315caa9586",
+      "sourceName": "contracts/len/TickLens.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IZebraV3Pool.sol",
+        "../interfaces/ITickLens.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "TickLens"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\interfaces\\ITickLens.sol": {
+      "lastModificationDate": 1711735109405,
+      "contentHash": "b22fb57162b097ada6fb4d01e3650d3b",
+      "sourceName": "contracts/interfaces/ITickLens.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "ITickLens"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\Multicall2.sol": {
+      "lastModificationDate": 1711743127933,
+      "contentHash": "b1decf748f614db2c59bee0baf47dae2",
+      "sourceName": "contracts/Multicall2.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "Multicall2"
+      ]
+    },
+    "C:\\Users\\CHRIS\\quai-contracts\\contracts\\ZebraInterfaceMulticall.sol": {
+      "lastModificationDate": 1711735109530,
+      "contentHash": "cfd6bfbbe7bf79ea31275d50a75acf7d",
+      "sourceName": "contracts/ZebraInterfaceMulticall.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.7.6"
+      ],
+      "artifacts": [
+        "ZebraInterfaceMulticall"
+      ]
+    }
+  }
+}
